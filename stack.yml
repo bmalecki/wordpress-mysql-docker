@@ -15,7 +15,9 @@ services:
           - ./wordpress/src:/var/www/html
 
     db:
-        image: mysql:5.7
+        build:
+            context: ./db
+        image: my_db
         environment:
             MYSQL_ROOT_PASSWORD: example
         volumes:
