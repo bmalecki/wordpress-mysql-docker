@@ -13,3 +13,6 @@ docker-compose -f stack.yml exec db sh -c "/usr/bin/mysqldump -u root -pexample 
 ```
 docker-compose -f stack.yml build db
 ```
+
+# 3. Change wordpress folder permission
+sudo chown -R www-data:www-data wordpress/src/
